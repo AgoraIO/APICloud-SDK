@@ -1,0 +1,12 @@
+<widget id="A0000000000001"  version="0.0.2">
+    <name>agora-rtc</name>
+    <description>APICloud module extension for Agora RTC.</description>
+    <author email="developer@agora.io" href="http://www.agora.io">
+        Developer
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <preference name="bounces" value="true" />
+    <preference name="debug" value="true" />
+    <preference name="customRefreshHeader" value="cusHeader" />
+</widget>
