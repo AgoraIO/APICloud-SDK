@@ -548,7 +548,7 @@
 					"-force_load",
 					"$(PROJECT_DIR)/../libs/UZEngine/libUZEngine.a",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.agora.apicloud.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = io.agora.rtc.apicloud.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "6bccbaff-6a9d-45ee-85f1-85485a455b20";
 				PROVISIONING_PROFILE_SPECIFIER = AgoraIODev2018;
@@ -586,7 +586,7 @@
 					"-force_load",
 					"$(PROJECT_DIR)/../libs/UZEngine/libUZEngine.a",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.agora.apicloud.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = io.agora.rtc.apicloud.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = AgoraIODev2018;
