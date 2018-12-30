@@ -1,6 +1,6 @@
 [
  {
- "name":"agoraRtc",
+ "name":"agora-rtc",
  "class":"AgoraRtcForAPICloud",
  "methods":["init", "destroy", "getSdkVersion", "setParameters", "setLogFile", "setLogFilter",
             "joinChannel", "leaveChannel", "setChannelProfile", "setClientRole", "renewToken",
@@ -11,6 +11,7 @@
             "muteLocalAudioStream", "muteAllRemoteAudioStreams", "muteRemoteAudioStream",
             "joinChannelSuccessListener", "leaveChannelListener", "firstLocalVideoFrameListener",
             "remoteUserJoinedListener", "remoteUserOfflineListener", "firstRemoteVideoDecodedListener",
+            "adjustRecordingSignalVolume", "adjustPlaybackSignalVolume", "adjustAudioMixingVolume",
             "requestTokenListener", "errorListener", "warningListener"]
  },
 ]

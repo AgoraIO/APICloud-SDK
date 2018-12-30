@@ -37,7 +37,7 @@
 }
 
 - (void)dispose {
-    //do clean
+    // do clean
     [self destroy:nil];
 }
 
@@ -350,8 +350,15 @@
         }
         return;
     }
-    
-    int errCode = [rtcEngine setVideoResolution:CGSizeMake(width, height) andFrameRate:frameRate bitrate:bitrate];
+
+//  int errCode = [rtcEngine setVideoResolution:CGSizeMake(width, height) andFrameRate:frameRate bitrate:bitrate]; // Earlier than 2.3.0
+    AgoraVideoEncoderConfiguration *configuration =
+    [[AgoraVideoEncoderConfiguration alloc] initWithSize:CGSizeMake(width, height)
+                                               frameRate:frameRate
+                                                 bitrate:bitrate
+                                         orientationMode:AgoraVideoOutputOrientationModeFixedPortrait];
+    int errCode [rtcEngine setVideoEncoderConfiguration:configuration];
+
     if (cbId > 0) {
         NSDictionary *ret = @{@"code" : @(errCode)};
         [self sendResultEventWithCallbackId:cbId dataDict:ret errDict:nil doDelete:YES];
@@ -656,6 +663,84 @@
     }
     
     int errCode = [rtcEngine resumeAudio];
+    if (cbId > 0) {
+        NSDictionary *ret = @{@"code" : @(errCode)};
+        [self sendResultEventWithCallbackId:cbId dataDict:ret errDict:nil doDelete:YES];
+    }
+}
+
+- (void)adjustRecordingSignalVolume:(NSDictionary *)paramDict {
+    NSInteger cbId = [paramDict integerValueForKey:@"cbId" defaultValue:0];
+    if (rtcEngine == nil) {
+        if (cbId > 0) {
+            NSDictionary *ret = @{@"code" : @(AgoraErrorCodeNotInitialized)};
+            [self sendResultEventWithCallbackId:cbId dataDict:ret errDict:nil doDelete:YES];
+        }
+        return;
+    }
+
+    NSInteger volume = [paramDict integerValueForKey:@"volume" defaultValue:100];
+    if (volume < 0 || volume > 400) {
+        if (cbId > 0) {
+            NSDictionary *ret = @{@"code" : @(AgoraErrorCodeInvalidArgument)};
+            [self sendResultEventWithCallbackId:cbId dataDict:ret errDict:nil doDelete:YES];
+        }
+        return;
+    }
+
+    int errCode = [rtcEngine adjustRecordingSignalVolume:volume];
+    if (cbId > 0) {
+        NSDictionary *ret = @{@"code" : @(errCode)};
+        [self sendResultEventWithCallbackId:cbId dataDict:ret errDict:nil doDelete:YES];
+    }
+}
+
+- (void)adjustPlaybackSignalVolume:(NSDictionary *)paramDict {
+    NSInteger cbId = [paramDict integerValueForKey:@"cbId" defaultValue:0];
+    if (rtcEngine == nil) {
+        if (cbId > 0) {
+            NSDictionary *ret = @{@"code" : @(AgoraErrorCodeNotInitialized)};
+            [self sendResultEventWithCallbackId:cbId dataDict:ret errDict:nil doDelete:YES];
+        }
+        return;
+    }
+
+    NSInteger volume = [paramDict integerValueForKey:@"volume" defaultValue:100];
+    if (volume < 0 || volume > 400) {
+        if (cbId > 0) {
+            NSDictionary *ret = @{@"code" : @(AgoraErrorCodeInvalidArgument)};
+            [self sendResultEventWithCallbackId:cbId dataDict:ret errDict:nil doDelete:YES];
+        }
+        return;
+    }
+
+    int errCode = [rtcEngine adjustPlaybackSignalVolume:volume];
+    if (cbId > 0) {
+        NSDictionary *ret = @{@"code" : @(errCode)};
+        [self sendResultEventWithCallbackId:cbId dataDict:ret errDict:nil doDelete:YES];
+    }
+}
+
+- (void)adjustAudioMixingVolume:(NSDictionary *)paramDict {
+    NSInteger cbId = [paramDict integerValueForKey:@"cbId" defaultValue:0];
+    if (rtcEngine == nil) {
+        if (cbId > 0) {
+            NSDictionary *ret = @{@"code" : @(AgoraErrorCodeNotInitialized)};
+            [self sendResultEventWithCallbackId:cbId dataDict:ret errDict:nil doDelete:YES];
+        }
+        return;
+    }
+
+    NSInteger volume = [paramDict integerValueForKey:@"volume" defaultValue:100];
+    if (volume < 0 || volume > 400) {
+        if (cbId > 0) {
+            NSDictionary *ret = @{@"code" : @(AgoraErrorCodeInvalidArgument)};
+            [self sendResultEventWithCallbackId:cbId dataDict:ret errDict:nil doDelete:YES];
+        }
+        return;
+    }
+
+    int errCode = [rtcEngine adjustAudioMixingVolume:volume];
     if (cbId > 0) {
         NSDictionary *ret = @{@"code" : @(errCode)};
         [self sendResultEventWithCallbackId:cbId dataDict:ret errDict:nil doDelete:YES];

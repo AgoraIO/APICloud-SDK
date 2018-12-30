@@ -62,7 +62,6 @@
 
 			var paramJoinChannel = { token: "", channel: "api_cloud_test", uid: 0 };
 			uzmodule_agora_rtc.joinChannel(paramJoinChannel);
-
 		}
 
 		/** --------- simple example -------- **/
@@ -83,7 +82,13 @@
 		}
 
 		function setLogFile() {
-			var param = { path: "/sdcard/agorasdk.txt" };
+			var param;
+			if (api.systemType == "android") {
+				param = { path: "/sdcard/agora_rtc.log" };
+			} else if (api.systemType == "ios") {
+				param = { path: "cache://agora_rtc.log" };
+			}
+
 			var resultCallback = function (ret, err) {
 				alert(ret.code);
 			}
