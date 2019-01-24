@@ -21,8 +21,8 @@ import io.agora.rtc.video.VideoCanvas;
 import io.agora.rtc.video.VideoEncoderConfiguration; // 2.3.0 and later
 
 /**
- * Javascript for Agora RTC SDK <br>
- * var module = api.require('agora-rtc');<br>
+ * JavaScript for Agora RTC SDK <br>
+ * var module = api.require('agoraRtc');<br>
  * module.xxx();
  */
 public class AgoraRTCModule extends UZModule {

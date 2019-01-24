@@ -8,6 +8,11 @@
 
 #import "UZModule.h"
 
+/**
+ * JavaScript for Agora RTC SDK <br>
+ * var module = api.require('agoraRtc');<br>
+ * module.xxx();
+ */
 @interface AgoraRtcForAPICloud : UZModule
 
 @end
