@@ -17,6 +17,7 @@
 		2F55619E21D87386000EEA2E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 527BCFAD19C4340F0077631F /* AVFoundation.framework */; };
 		2F55619F21D8746D000EEA2E /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52BA30A419F6367A00D81640 /* Accelerate.framework */; };
 		2F5561A121D874C7000EEA2E /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5561A021D874C7000EEA2E /* libicucore.tbd */; };
+		2F828DDB225B1FB7000842E1 /* CoreML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F828DDA225B1FB6000842E1 /* CoreML.framework */; };
 		5238DE3B1BE0BF2900D2CB5C /* EngineLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5238DE3D1BE0BF2900D2CB5C /* EngineLocalizable.strings */; };
 		5262179B1CFC3B9C00DEE766 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52BA30F219F6368400D81640 /* WebKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		527BCF7119C431480077631F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 527BCF7019C431480077631F /* main.m */; };
@@ -44,6 +45,7 @@
 		2F55619A21D87371000EEA2E /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		2F55619C21D87378000EEA2E /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		2F5561A021D874C7000EEA2E /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		2F828DDA225B1FB6000842E1 /* CoreML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreML.framework; path = System/Library/Frameworks/CoreML.framework; sourceTree = SDKROOT; };
 		523771DC1ADB81C300C15847 /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = System/Library/Frameworks/WatchKit.framework; sourceTree = SDKROOT; };
 		5238DE3C1BE0BF2900D2CB5C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/EngineLocalizable.strings; sourceTree = "<group>"; };
 		5238DE3E1BE0BF3800D2CB5C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/EngineLocalizable.strings"; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F828DDB225B1FB7000842E1 /* CoreML.framework in Frameworks */,
 				2F5561A121D874C7000EEA2E /* libicucore.tbd in Frameworks */,
 				2F55619F21D8746D000EEA2E /* Accelerate.framework in Frameworks */,
 				2F55619E21D87386000EEA2E /* AVFoundation.framework in Frameworks */,
@@ -206,6 +209,7 @@
 		527BCFD619C434200077631F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2F828DDA225B1FB6000842E1 /* CoreML.framework */,
 				2F5561A021D874C7000EEA2E /* libicucore.tbd */,
 				2F55619C21D87378000EEA2E /* libresolv.tbd */,
 				2F55619A21D87371000EEA2E /* libc++.tbd */,
@@ -357,6 +361,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 				"zh-Hans",

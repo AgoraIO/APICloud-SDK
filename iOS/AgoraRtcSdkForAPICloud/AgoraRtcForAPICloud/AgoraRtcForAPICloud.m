@@ -357,7 +357,7 @@
                                                frameRate:frameRate
                                                  bitrate:bitrate
                                          orientationMode:AgoraVideoOutputOrientationModeFixedPortrait];
-    int errCode [rtcEngine setVideoEncoderConfiguration:configuration];
+    int errCode = [rtcEngine setVideoEncoderConfiguration:configuration];
 
     if (cbId > 0) {
         NSDictionary *ret = @{@"code" : @(errCode)};
