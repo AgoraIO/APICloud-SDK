@@ -140,6 +140,16 @@
 			uzmodule_agora_rtc.enableLocalVideo(param);
 		}
 
+		function setEnableSpeakerphone() {
+			var param = { enabled: true };
+			uzmodule_agora_rtc.setEnableSpeakerphone(param);
+		}
+
+		function setDefaultAudioRouteToSpeakerphone() {
+			var param = { enabled: true };
+			uzmodule_agora_rtc.setDefaultAudioRouteToSpeakerphone(param);
+		}
+
 		function setVideoProfile() {
 			var param = { width: 360, height: 640, frameRate: 15, bitrate: 800 };
 			uzmodule_agora_rtc.setVideoProfile(param);

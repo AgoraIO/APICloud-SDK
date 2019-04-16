@@ -8,6 +8,7 @@
             "startPreview", "stopPreview", "setupLocalVideo", "setupRemoteVideo",
             "muteLocalVideoStream", "muteAllRemoteVideoStreams", "muteRemoteVideoStream",
             "enableAudio", "disableAudio", "pauseAudio", "resumeAudio",
+            "setEnableSpeakerphone", "setDefaultAudioRouteToSpeakerphone",
             "muteLocalAudioStream", "muteAllRemoteAudioStreams", "muteRemoteAudioStream",
             "joinChannelSuccessListener", "leaveChannelListener", "firstLocalVideoFrameListener",
             "remoteUserJoinedListener", "remoteUserOfflineListener", "firstRemoteVideoDecodedListener",

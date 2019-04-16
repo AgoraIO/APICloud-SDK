@@ -354,6 +354,18 @@ public class AgoraRTCModule extends UZModule {
         }
     }
 
+    public void jsmethod_setEnableSpeakerphone(final UZModuleContext moduleContext) {
+        if (mRtcEngine != null) {
+            sendJsonResultToJs(moduleContext, mRtcEngine.setEnableSpeakerphone(moduleContext.optBoolean("enabled")));
+        }
+    }
+
+    public void jsmethod_setDefaultAudioRouteToSpeakerphone(final UZModuleContext moduleContext) {
+        if (mRtcEngine != null) {
+            sendJsonResultToJs(moduleContext, mRtcEngine.setDefaultAudioRoutetoSpeakerphone(moduleContext.optBoolean("enabled")));
+        }
+    }
+
     public void jsmethod_setVideoProfile(final UZModuleContext moduleContext) {
         if (mRtcEngine != null) {
             int w = moduleContext.optInt("width");

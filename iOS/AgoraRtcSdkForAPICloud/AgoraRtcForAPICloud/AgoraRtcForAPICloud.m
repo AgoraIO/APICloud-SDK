@@ -329,6 +329,42 @@
     }
 }
 
+- (void)setEnableSpeakerphone:(NSDictionary *)paramDict {
+    NSInteger cbId = [paramDict integerValueForKey:@"cbId" defaultValue:0];
+    if (rtcEngine == nil) {
+        if (cbId > 0) {
+            NSDictionary *ret = @{@"code" : @(AgoraErrorCodeNotInitialized)};
+            [self sendResultEventWithCallbackId:cbId dataDict:ret errDict:nil doDelete:YES];
+        }
+        return;
+    }
+
+    BOOL enableSpeaker = [paramDict boolValueForKey:@"enabled" defaultValue:YES];
+    int errCode = [rtcEngine setEnableSpeakerphone:enableSpeaker];
+    if (cbId > 0) {
+        NSDictionary *ret = @{@"code" : @(errCode)};
+        [self sendResultEventWithCallbackId:cbId dataDict:ret errDict:nil doDelete:YES];
+    }
+}
+
+- (void)setDefaultAudioRouteToSpeakerphone:(NSDictionary *)paramDict {
+    NSInteger cbId = [paramDict integerValueForKey:@"cbId" defaultValue:0];
+    if (rtcEngine == nil) {
+        if (cbId > 0) {
+            NSDictionary *ret = @{@"code" : @(AgoraErrorCodeNotInitialized)};
+            [self sendResultEventWithCallbackId:cbId dataDict:ret errDict:nil doDelete:YES];
+        }
+        return;
+    }
+
+    BOOL defaultToSpeaker = [paramDict boolValueForKey:@"enabled" defaultValue:YES];
+    int errCode = [rtcEngine setDefaultAudioRouteToSpeakerphone:defaultToSpeaker];
+    if (cbId > 0) {
+        NSDictionary *ret = @{@"code" : @(errCode)};
+        [self sendResultEventWithCallbackId:cbId dataDict:ret errDict:nil doDelete:YES];
+    }
+}
+
 - (void)setVideoProfile:(NSDictionary *)paramDict {
     NSInteger cbId = [paramDict integerValueForKey:@"cbId" defaultValue:0];
     if (rtcEngine == nil) {

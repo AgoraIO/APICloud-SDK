@@ -18,13 +18,13 @@
 		2F55619F21D8746D000EEA2E /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52BA30A419F6367A00D81640 /* Accelerate.framework */; };
 		2F5561A121D874C7000EEA2E /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5561A021D874C7000EEA2E /* libicucore.tbd */; };
 		2F828DDB225B1FB7000842E1 /* CoreML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F828DDA225B1FB6000842E1 /* CoreML.framework */; };
+		2FF50A302265913100B5CA54 /* libagoraRtc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FF50A2F2265913100B5CA54 /* libagoraRtc.a */; };
 		5238DE3B1BE0BF2900D2CB5C /* EngineLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5238DE3D1BE0BF2900D2CB5C /* EngineLocalizable.strings */; };
 		5262179B1CFC3B9C00DEE766 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52BA30F219F6368400D81640 /* WebKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		527BCF7119C431480077631F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 527BCF7019C431480077631F /* main.m */; };
 		527BCF7C19C431480077631F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 527BCF7B19C431480077631F /* Images.xcassets */; };
 		527BCFF519C4346B0077631F /* uz in Resources */ = {isa = PBXBuildFile; fileRef = 527BCFF319C4346B0077631F /* uz */; };
 		527BCFF619C4346B0077631F /* widget in Resources */ = {isa = PBXBuildFile; fileRef = 527BCFF419C4346B0077631F /* widget */; };
-		70F66F5420464FCB00AB9492 /* libagoraRtc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70F66F5220464FCB00AB9492 /* libagoraRtc.a */; };
 		70F66F5520464FCB00AB9492 /* AgoraRtcEngineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70F66F5320464FCB00AB9492 /* AgoraRtcEngineKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +46,7 @@
 		2F55619C21D87378000EEA2E /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		2F5561A021D874C7000EEA2E /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		2F828DDA225B1FB6000842E1 /* CoreML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreML.framework; path = System/Library/Frameworks/CoreML.framework; sourceTree = SDKROOT; };
+		2FF50A2F2265913100B5CA54 /* libagoraRtc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libagoraRtc.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		523771DC1ADB81C300C15847 /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = System/Library/Frameworks/WatchKit.framework; sourceTree = SDKROOT; };
 		5238DE3C1BE0BF2900D2CB5C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/EngineLocalizable.strings; sourceTree = "<group>"; };
 		5238DE3E1BE0BF3800D2CB5C /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/EngineLocalizable.strings"; sourceTree = "<group>"; };
@@ -130,7 +131,6 @@
 		70E35C452046AEE800258A8D /* UZAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UZAppDelegate.h; sourceTree = "<group>"; };
 		70E35C462046AEE800258A8D /* UZAppUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UZAppUtils.h; sourceTree = "<group>"; };
 		70E35C472046AEE800258A8D /* NSDictionaryUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionaryUtils.h; sourceTree = "<group>"; };
-		70F66F5220464FCB00AB9492 /* libagoraRtc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libagoraRtc.a; path = ../libs/libagoraRtc.a; sourceTree = "<group>"; };
 		70F66F5320464FCB00AB9492 /* AgoraRtcEngineKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AgoraRtcEngineKit.framework; path = ../libs/AgoraRtcEngineKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FF50A302265913100B5CA54 /* libagoraRtc.a in Frameworks */,
 				2F828DDB225B1FB7000842E1 /* CoreML.framework in Frameworks */,
 				2F5561A121D874C7000EEA2E /* libicucore.tbd in Frameworks */,
 				2F55619F21D8746D000EEA2E /* Accelerate.framework in Frameworks */,
@@ -150,7 +151,6 @@
 				2F55619721D872FA000EEA2E /* AudioToolbox.framework in Frameworks */,
 				2F55619621D872E5000EEA2E /* CoreMedia.framework in Frameworks */,
 				2F55619521D871DA000EEA2E /* VideoToolbox.framework in Frameworks */,
-				70F66F5420464FCB00AB9492 /* libagoraRtc.a in Frameworks */,
 				70F66F5520464FCB00AB9492 /* AgoraRtcEngineKit.framework in Frameworks */,
 				5262179B1CFC3B9C00DEE766 /* WebKit.framework in Frameworks */,
 			);
@@ -209,12 +209,12 @@
 		527BCFD619C434200077631F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2FF50A2F2265913100B5CA54 /* libagoraRtc.a */,
 				2F828DDA225B1FB6000842E1 /* CoreML.framework */,
 				2F5561A021D874C7000EEA2E /* libicucore.tbd */,
 				2F55619C21D87378000EEA2E /* libresolv.tbd */,
 				2F55619A21D87371000EEA2E /* libc++.tbd */,
 				70F66F5320464FCB00AB9492 /* AgoraRtcEngineKit.framework */,
-				70F66F5220464FCB00AB9492 /* libagoraRtc.a */,
 				529FCFB31C001EFC00AFDBAF /* Contacts.framework */,
 				529FCFB41C001EFC00AFDBAF /* ContactsUI.framework */,
 				523771DC1ADB81C300C15847 /* WatchKit.framework */,
