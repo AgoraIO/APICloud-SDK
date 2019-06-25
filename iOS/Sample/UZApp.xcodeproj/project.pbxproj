@@ -552,6 +552,7 @@
 					"-ObjC",
 					"-force_load",
 					"$(PROJECT_DIR)/../libs/UZEngine/libUZEngine.a",
+					"$(PROJECT_DIR)/../libs/UZEngine/Dependencies/libminizip.a",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.agora.rtc.apicloud.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -590,6 +591,7 @@
 					"-ObjC",
 					"-force_load",
 					"$(PROJECT_DIR)/../libs/UZEngine/libUZEngine.a",
+					"$(PROJECT_DIR)/../libs/UZEngine/Dependencies/libminizip.a",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.agora.rtc.apicloud.sample;
 				PRODUCT_NAME = "$(TARGET_NAME)";

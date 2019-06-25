@@ -1,0 +1,7 @@
+// Download SDK from APICloud and replace it here
+
+libUZEngine.a
+*.h
+Dependencies
+├── libminizip.a
+
