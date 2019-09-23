@@ -22,7 +22,6 @@
 
 /* Begin PBXBuildFile section */
 		7024AA43203EA370005FA533 /* AgoraRtcForAPICloud.m in Sources */ = {isa = PBXBuildFile; fileRef = 7024AA41203EA370005FA533 /* AgoraRtcForAPICloud.m */; };
-		70E9F9632046997F00F60D69 /* AgoraRtcEngineKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70E9F9622046997F00F60D69 /* AgoraRtcEngineKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,7 +46,6 @@
 		70A5C9842046AC2D00135786 /* UZAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UZAppDelegate.h; sourceTree = "<group>"; };
 		70A5C9852046AC2D00135786 /* UZAppUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UZAppUtils.h; sourceTree = "<group>"; };
 		70A5C9862046AC2D00135786 /* NSDictionaryUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionaryUtils.h; sourceTree = "<group>"; };
-		70E9F9622046997F00F60D69 /* AgoraRtcEngineKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AgoraRtcEngineKit.framework; path = ../libs/AgoraRtcEngineKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +53,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70E9F9632046997F00F60D69 /* AgoraRtcEngineKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,7 +64,6 @@
 			children = (
 				70A5C97F2046AC2D00135786 /* UZEngine */,
 				5286082A1A596B0600587EC2 /* AgoraRtcForAPICloud */,
-				7024AA54203EAEE9005FA533 /* Frameworks */,
 				528608291A596B0600587EC2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,14 +83,6 @@
 				7024AA41203EA370005FA533 /* AgoraRtcForAPICloud.m */,
 			);
 			path = AgoraRtcForAPICloud;
-			sourceTree = "<group>";
-		};
-		7024AA54203EAEE9005FA533 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				70E9F9622046997F00F60D69 /* AgoraRtcEngineKit.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		70A5C97F2046AC2D00135786 /* UZEngine */ = {
@@ -154,6 +142,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 5286081F1A596B0600587EC2;

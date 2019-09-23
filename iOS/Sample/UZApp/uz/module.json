@@ -1,6 +1,6 @@
 [
  {
- "name":"agoraRtc",
+ "name":"agora_rtc",
  "class":"AgoraRtcForAPICloud",
  "methods":["init", "destroy", "getSdkVersion", "setParameters", "setLogFile", "setLogFilter",
             "joinChannel", "leaveChannel", "setChannelProfile", "setClientRole", "renewToken",
