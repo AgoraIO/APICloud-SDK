@@ -2,6 +2,8 @@
 Agora RTC SDK 文件请去 https://docs.agora.io/cn/Agora%20Platform/downloads 下载。
 App Id 请去 https://dashboard.agora.io/ 注册获取。
 
+示例代码请参考 https://github.com/AgoraIO/APICloud-SDK/，可以使用 `git clone`，如果需要下载压缩包，请使用该链接 https://github.com/AgoraIO/APICloud-SDK/archive/master.zip
+
 对于 Android 来说，需要先按照 `PLACEHOLDER` 文件添加对应的库文件。
 
 `Android/app/libs/PLACEHOLDER`
