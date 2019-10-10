@@ -1,7 +1,7 @@
 {
 	"modules":[
 		{
-			"name":"agora_rtc",
+			"name":"agoraRtc",
 			"class":"com.apicloud.agora.rtc.AgoraRTCModule"
 		}
 	]

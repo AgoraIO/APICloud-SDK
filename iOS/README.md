@@ -1,5 +1,5 @@
 /*
-Title: agora_rtc
+Title: agoraRtc
 Description: Agora RTC SDK for APICloud
 */
 
@@ -95,21 +95,21 @@ Description: Agora RTC SDK for APICloud
 
 Agora RTC SDK，是 Agora 采用自主研发的音视频编解码，为实时互动通信及直播类应用量身打造而成的 SDK。 依托 Agora 全球部署的 SD-RTN 及端到端技术，Agora RTC SDK 具有高品质、低延迟、抗丢包等特点。
 
-###使用 agora_rtc 基本流程说明：
+###使用 agoraRtc 基本流程说明：
 
 1.在 Agora 网站（ https://www.agora.io ）注册帐号，并创建应用，获取 App ID
 
-2.在 [config.xml](/APICloud/技术专题/app-config-manual) 中配置 agora_rtc feature，填写 appId 参数
+2.在 [config.xml](/APICloud/技术专题/app-config-manual) 中配置 agoraRtc feature，填写 appId 参数
 
-3.前端调用 agora_rtc 模块方法，初始化和加入频道。
+3.前端调用 agoraRtc 模块方法，初始化和加入频道。
 
 **建议使用此模块之前先配置 config.xml 文件的 Feature，方法如下**
 
-	名称：agora_rtc
+	名称：agoraRtc
 	参数：appId
-	描述：配置 agora_rtc 应用信息
+	描述：配置 agoraRtc 应用信息
 ```js
-	<feature name="agora_rtc">
+	<feature name="agoraRtc">
 		<param name="appId" value="123456789" />
 	</feature>
 ```
@@ -132,7 +132,7 @@ appId：
 ##示例代码
 
 ```js
-var agoraRtc = api.require('agora_rtc');
+var agoraRtc = api.require('agoraRtc');
 agoraRtc.init({appId:'appId'});
 ```
 
@@ -152,7 +152,7 @@ destroy()
 ##示例代码
 
 ```js
-var agoraRtc = api.require('agora_rtc');
+var agoraRtc = api.require('agoraRtc');
 agoraRtc.destroy();
 ```
 
@@ -179,7 +179,7 @@ ret：
 ##示例代码
 
 ```js
-var agoraRtc = api.require('agora_rtc');
+var agoraRtc = api.require('agoraRtc');
 agoraRtc.getSdkVersion(function(ret){
     api.alert({msg:'Agora RTC SDK Version: ' + ret});
 });
@@ -223,7 +223,7 @@ ret：
 ##示例代码
 
 ```js
-var agoraRtc = api.require('agora_rtc');
+var agoraRtc = api.require('agoraRtc');
 agoraRtc.setParameters({
     params:''
 }, function(ret) {
@@ -271,7 +271,7 @@ ret：
 ##示例代码
 
 ```js
-var agoraRtc = api.require('agora_rtc');
+var agoraRtc = api.require('agoraRtc');
 agoraRtc.setLogFile({
     path:'cache://agoraRtc.log'
 }, function(ret) {
@@ -324,7 +324,7 @@ ret：
 ##示例代码
 
 ```js
-var agoraRtc = api.require('agora_rtc');
+var agoraRtc = api.require('agoraRtc');
 agoraRtc.setLogFilter({
     filter:0x080f
 }, function(ret) {
@@ -386,7 +386,7 @@ ret：
 ##示例代码
 
 ```js
-var agoraRtc = api.require('agora_rtc');
+var agoraRtc = api.require('agoraRtc');
 agoraRtc.joinChannel({
     channel:'test'
 }, function(ret) {
@@ -426,7 +426,7 @@ ret：
 ##示例代码
 
 ```js
-var agoraRtc = api.require('agora_rtc');
+var agoraRtc = api.require('agoraRtc');
 agoraRtc.leaveChannel(function(ret) {
 	if (ret.code == 0) {
 		// success
@@ -475,9 +475,9 @@ ret：
 ##示例代码
 
 ```js
-var agoraRtc = api.require('agora_rtc');
+var agoraRtc = api.require('agoraRtc');
 agoraRtc. setChannelProfile({
-    profile:1
+    profile: 1
 }, function(ret) {
 	if (ret.code == 0) {
 		// success
@@ -525,9 +525,9 @@ ret：
 ##示例代码
 
 ```js
-var agoraRtc = api.require('agora_rtc');
+var agoraRtc = api.require('agoraRtc');
 agoraRtc. setClientRole({
-    role:1
+    role: 1
 }, function(ret) {
 	if (ret.code == 0) {
 		// success
@@ -573,7 +573,7 @@ ret：
 ##示例代码
 
 ```js
-var agoraRtc = api.require('agora_rtc');
+var agoraRtc = api.require('agoraRtc');
 agoraRtc.renewToken({
     token:''
 }, function(ret) {
@@ -613,7 +613,7 @@ ret：
 ##示例代码
 
 ```js
-var agoraRtc = api.require('agora_rtc');
+var agoraRtc = api.require('agoraRtc');
 agoraRtc.enableVideo(function(ret) {
 	if (ret.code == 0) {
 		// success
@@ -651,7 +651,7 @@ ret：
 ##示例代码
 
 ```js
-var agoraRtc = api.require('agora_rtc');
+var agoraRtc = api.require('agoraRtc');
 agoraRtc.disableVideo(function(ret) {
 	if (ret.code == 0) {
 		// success
@@ -697,7 +697,7 @@ ret：
 ##示例代码
 
 ```js
-var agoraRtc = api.require('agora_rtc');
+var agoraRtc = api.require('agoraRtc');
 agoraRtc.enableLocalVideo({
     enabled:true
 }, function(ret) {
@@ -763,12 +763,12 @@ ret：
 ##示例代码
 
 ```js
-var agoraRtc = api.require('agora_rtc');
+var agoraRtc = api.require('agoraRtc');
 agoraRtc.setVideoProfile({
-    width:360,
-    height:360,
-    frameRate:15,
-    bitrate:800
+    width: 360,
+    height: 360,
+    frameRate: 15,
+    bitrate: 800
 }, function(ret) {
 	if (ret.code == 0) {
 		// success
@@ -806,7 +806,7 @@ ret：
 ##示例代码
 
 ```js
-var agoraRtc = api.require('agora_rtc');
+var agoraRtc = api.require('agoraRtc');
 agoraRtc.switchCamera(function(ret) {
 	if (ret.code == 0) {
 		// success
@@ -844,7 +844,7 @@ ret：
 ##示例代码
 
 ```js
-var agoraRtc = api.require('agora_rtc');
+var agoraRtc = api.require('agoraRtc');
 agoraRtc.startPreview(function(ret) {
 	if (ret.code == 0) {
 		// success
@@ -882,7 +882,7 @@ ret：
 ##示例代码
 
 ```js
-var agoraRtc = api.require('agora_rtc');
+var agoraRtc = api.require('agoraRtc');
 agoraRtc.stopPreview(function(ret) {
 	if (ret.code == 0) {
 		// success
@@ -914,10 +914,10 @@ rect：
 
 ```js
 {
-    x:0,    //（可选项）数字类型；视频区域左上角的 x 坐标（相对于所属的 Window 或 Frame）；默认：0
-    y:0,    //（可选项）数字类型；视频区域左上角的 y 坐标（相对于所属的 Window 或 Frame）；默认：0
-    w:360,  // 数字类型；视频区域的宽度
-    h:640   // 数字类型；视频区域的高度
+    x: 0, //（可选项）数字类型；视频区域左上角的 x 坐标（相对于所属的 Window 或 Frame）；默认：0
+    y: 0, //（可选项）数字类型；视频区域左上角的 y 坐标（相对于所属的 Window 或 Frame）；默认：0
+    w: 360, // 数字类型；视频区域的宽度
+    h: 640 // 数字类型；视频区域的高度
 }
 ```
 
@@ -960,11 +960,11 @@ ret：
 ##示例代码
 
 ```js
-var agoraRtc = api.require('agora_rtc');
+var agoraRtc = api.require('agoraRtc');
 agoraRtc.setupLocalVideo({
-    rect:{ x:0, y:0, w:360, h:640 },
-    fixed:false,
-    renderMode:1
+    rect:{ x: 0, y: 0, w: 360, h: 640 },
+    fixed: false,
+    renderMode: 1
 }, function(ret) {
 	if (ret.code == 0) {
 		// success
@@ -1004,10 +1004,10 @@ rect：
 
 ```js
 {
-    x:0,    //（可选项）数字类型；视频区域左上角的 x 坐标（相对于所属的 Window 或 Frame）；默认：0
-    y:0,    //（可选项）数字类型；视频区域左上角的 y 坐标（相对于所属的 Window 或 Frame）；默认：0
-    w:360,  // 数字类型；视频区域的宽度
-    h:640   // 数字类型；视频区域的高度
+    x: 0, //（可选项）数字类型；视频区域左上角的 x 坐标（相对于所属的 Window 或 Frame）；默认：0
+    y: 0, //（可选项）数字类型；视频区域左上角的 y 坐标（相对于所属的 Window 或 Frame）；默认：0
+    w: 360, // 数字类型；视频区域的宽度
+    h: 640 // 数字类型；视频区域的高度
 }
 ```
 
@@ -1050,12 +1050,12 @@ ret：
 ##示例代码
 
 ```js
-var agoraRtc = api.require('agora_rtc');
+var agoraRtc = api.require('agoraRtc');
 agoraRtc.setupRemoteVideo({
-    uid:1
-    rect:{ x:0, y:0, w:360, h:640 },
-    fixed:false,
-    renderMode:1
+    uid: 1
+    rect:{ x: 0, y: 0, w: 360, h: 640 },
+    fixed: false,
+    renderMode: 1
 }, function(ret) {
 	if (ret.code == 0) {
 		// success
@@ -1103,9 +1103,9 @@ ret：
 ##示例代码
 
 ```js
-var agoraRtc = api.require('agora_rtc');
+var agoraRtc = api.require('agoraRtc');
 agoraRtc.muteLocalVideoStream({
-    mute:true
+    mute: true
 }, function(ret) {
 	if (ret.code == 0) {
 		// success
@@ -1153,9 +1153,9 @@ ret：
 ##示例代码
 
 ```js
-var agoraRtc = api.require('agora_rtc');
+var agoraRtc = api.require('agoraRtc');
 agoraRtc.muteAllRemoteVideoStreams({
-    mute:true
+    mute: true
 }, function(ret) {
 	if (ret.code == 0) {
 		// success
@@ -1209,10 +1209,10 @@ ret：
 ##示例代码
 
 ```js
-var agoraRtc = api.require('agora_rtc');
+var agoraRtc = api.require('agoraRtc');
 agoraRtc.muteRemoteVideoStream({
-    uid:1
-    mute:true
+    uid: 1
+    mute: true
 }, function(ret) {
 	if (ret.code == 0) {
 		// success
@@ -1250,7 +1250,7 @@ ret：
 ##示例代码
 
 ```js
-var agoraRtc = api.require('agora_rtc');
+var agoraRtc = api.require('agoraRtc');
 agoraRtc.enableAudio(function(ret) {
 	if (ret.code == 0) {
 		// success
@@ -1288,7 +1288,7 @@ ret：
 ##示例代码
 
 ```js
-var agoraRtc = api.require('agora_rtc');
+var agoraRtc = api.require('agoraRtc');
 agoraRtc.disableAudio(function(ret) {
 	if (ret.code == 0) {
 		// success
@@ -1326,7 +1326,7 @@ ret：
 ##示例代码
 
 ```js
-var agoraRtc = api.require('agora_rtc');
+var agoraRtc = api.require('agoraRtc');
 agoraRtc.pauseAudio(function(ret) {
 	if (ret.code == 0) {
 		// success
@@ -1364,7 +1364,7 @@ ret：
 ##示例代码
 
 ```js
-var agoraRtc = api.require('agora_rtc');
+var agoraRtc = api.require('agoraRtc');
 agoraRtc.resumeAudio(function(ret) {
 	if (ret.code == 0) {
 		// success
@@ -1412,7 +1412,7 @@ ret：
 ##示例代码
 
 ```js
-var agoraRtc = api.require('agora_rtc');
+var agoraRtc = api.require('agoraRtc');
 agoraRtc.muteLocalAudioStream({
     mute:true
 }, function(ret) {
@@ -1462,9 +1462,9 @@ ret：
 ##示例代码
 
 ```js
-var agoraRtc = api.require('agora_rtc');
+var agoraRtc = api.require('agoraRtc');
 agoraRtc.muteAllRemoteAudioStreams({
-    mute:1
+    mute: 1
 }, function(ret) {
 	if (ret.code == 0) {
 		// success
@@ -1518,10 +1518,10 @@ ret：
 ##示例代码
 
 ```js
-var agoraRtc = api.require('agora_rtc');
+var agoraRtc = api.require('agoraRtc');
 agoraRtc.muteRemoteAudioStream({
-    uid:1,
-    mute:true
+    uid: 1,
+    mute: true
 }, function(ret) {
 	if (ret.code == 0) {
 		// success
@@ -1560,7 +1560,7 @@ ret：
 ##示例代码
 
 ```js
-var agoraRtc = api.require('agora_rtc');
+var agoraRtc = api.require('agoraRtc');
 agoraRtc.joinChannelSuccessListener(function(ret) {
 });
 ```
@@ -1581,7 +1581,7 @@ leaveChannelListener(callback())
 ##示例代码
 
 ```js
-var agoraRtc = api.require('agora_rtc');
+var agoraRtc = api.require('agoraRtc');
 agoraRtc.leaveChannelListener(function() {
 });
 ```
@@ -1617,7 +1617,7 @@ ret：
 ##示例代码
 
 ```js
-var agoraRtc = api.require('agora_rtc');
+var agoraRtc = api.require('agoraRtc');
 agoraRtc.firstLocalVideoFrameListener(function(ret) {
 });
 ```
@@ -1652,7 +1652,7 @@ ret：
 ##示例代码
 
 ```js
-var agoraRtc = api.require('agora_rtc');
+var agoraRtc = api.require('agoraRtc');
 agoraRtc.remoteUserJoinedListener(function(ret) {
 });
 ```
@@ -1687,7 +1687,7 @@ ret：
 ##示例代码
 
 ```js
-var agoraRtc = api.require('agora_rtc');
+var agoraRtc = api.require('agoraRtc');
 agoraRtc.remoteUserOfflineListener(function(ret) {
     //agoraRtc.setupRemoteVideo({uid:ret.uid});
 });
@@ -1725,7 +1725,7 @@ ret：
 ##示例代码
 
 ```js
-var agoraRtc = api.require('agora_rtc');
+var agoraRtc = api.require('agoraRtc');
 agoraRtc.firstRemoteVideoDecodedListener(function(ret) {
 });
 ```
@@ -1746,7 +1746,7 @@ requestTokenListener(callback())
 ##示例代码
 
 ```js
-var agoraRtc = api.require('agora_rtc');
+var agoraRtc = api.require('agoraRtc');
 agoraRtc.requestTokenListener(function() {
     //agoraRtc.renewToken({token:'new token'});
 });
@@ -1782,7 +1782,7 @@ ret：
 ##示例代码
 
 ```js
-var agoraRtc = api.require('agora_rtc');
+var agoraRtc = api.require('agoraRtc');
 agoraRtc.errorListener(function(ret) {
 });
 ```
@@ -1816,7 +1816,7 @@ ret：
 ##示例代码
 
 ```js
-var agoraRtc = api.require('agora_rtc');
+var agoraRtc = api.require('agoraRtc');
 agoraRtc.warningListener(function(ret) {
 });
 ```
