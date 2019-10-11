@@ -10,3 +10,4 @@
     <preference name="debug" value="true" />
     <preference name="customRefreshHeader" value="cusHeader" />
 </widget>
+

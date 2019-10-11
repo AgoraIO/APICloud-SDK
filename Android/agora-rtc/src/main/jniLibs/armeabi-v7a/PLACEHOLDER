@@ -1,3 +1,4 @@
-libsec.so
-libagora-rtc-sdk-jni.so
+// Download SDK from Agora.io and replace it here
+// https://docs.agora.io/en/Agora%20Platform/downloads
 
+libagora-rtc-sdk-jni.so

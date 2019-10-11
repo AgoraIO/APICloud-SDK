@@ -6,7 +6,17 @@ App Id 请去 https://dashboard.agora.io/ 注册获取。
 
 对于 Android 来说，需要先按照 `PLACEHOLDER` 文件添加对应的库文件。
 
+`Android/agora-rtc/libs/PLACEHOLDER`
+
+`Android/agora-rtc/src/main/jniLibs/armeabi/PLACEHOLDER`
+
+`Android/agora-rtc/src/main/jniLibs/armeabi-v7a/PLACEHOLDER`
+
+`Android/agora-rtc/src/main/jniLibs/arm64-v8a/PLACEHOLDER`
+
 `Android/app/libs/PLACEHOLDER`
+
+`Android/app/src/main/jniLibs/armeabi/PLACEHOLDER`
 
 `Android/app/src/main/jniLibs/armeabi-v7a/PLACEHOLDER`
 
