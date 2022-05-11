@@ -9,7 +9,7 @@
 #import "AgoraRtcForAPICloud.h"
 #import "UZAppDelegate.h"
 #import "NSDictionaryUtils.h"
-#import <AgoraRtcEngineKit/AgoraRtcEngineKit.h>
+#import <AgoraRtcKit/AgoraRtcEngineKit.h>
 
 @interface AgoraRtcForAPICloud () <AgoraRtcEngineDelegate>
 {

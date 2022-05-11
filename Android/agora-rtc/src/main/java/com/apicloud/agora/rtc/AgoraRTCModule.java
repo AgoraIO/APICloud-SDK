@@ -1,5 +1,10 @@
 package com.apicloud.agora.rtc;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
+import android.os.Build;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
 import android.view.SurfaceView;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
@@ -27,6 +32,10 @@ import io.agora.rtc.video.VideoEncoderConfiguration; // 2.3.0 and later
  */
 public class AgoraRTCModule extends UZModule {
 
+    private static final String[] REQUESTED_PERMISSIONS = new String[]{
+            Manifest.permission.RECORD_AUDIO, Manifest.permission.CAMERA};
+    private static final int PERMISSION_REQ_ID = 22;
+
     private UZModuleContext mJsCallbackWarning;
     private UZModuleContext mJsCallbackError;
     private UZModuleContext mJsCallbackRequestToken;
@@ -45,6 +54,27 @@ public class AgoraRTCModule extends UZModule {
     }
 
     private RtcEngine mRtcEngine;
+
+    private boolean checkSelfPermission(String permission, int requestCode) {
+        if (ContextCompat.checkSelfPermission(getContext(), permission) !=
+                PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(getContext(), REQUESTED_PERMISSIONS, requestCode);
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * @see <a href="https://developer.android.com/images/training/permissions/workflow-runtime.svg"/>
+     */
+    private void handlePermissionStuff() {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
+            return;
+        }
+        for (String permission : REQUESTED_PERMISSIONS) {
+            checkSelfPermission(permission, PERMISSION_REQ_ID);
+        }
+    }
 
     private final IRtcEngineEventHandler mRtcEventHandler = new IRtcEngineEventHandler() {
 
@@ -247,6 +277,7 @@ public class AgoraRTCModule extends UZModule {
         if (mRtcEngine == null) {
             try {
                 mRtcEngine = RtcEngine.create(getContext(), moduleContext.optString("appId"), mRtcEventHandler);
+                handlePermissionStuff();
             } catch (Exception e) {
                 e.printStackTrace();
             }

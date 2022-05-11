@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -22,6 +22,10 @@
 
 /* Begin PBXBuildFile section */
 		7024AA43203EA370005FA533 /* AgoraRtcForAPICloud.m in Sources */ = {isa = PBXBuildFile; fileRef = 7024AA41203EA370005FA533 /* AgoraRtcForAPICloud.m */; };
+		8BC3EC63281E2CC60013FBF9 /* AgoraCore.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BC3EC48281E2BC10013FBF9 /* AgoraCore.xcframework */; };
+		8BC3EC64281E2CC60013FBF9 /* Agoraffmpeg.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BC3EC50281E2BC10013FBF9 /* Agoraffmpeg.xcframework */; };
+		8BC3EC65281E2CC60013FBF9 /* AgoraRtcKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BC3EC56281E2BC10013FBF9 /* AgoraRtcKit.xcframework */; };
+		8BC3EC66281E2CC60013FBF9 /* AgoraSoundTouch.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BC3EC58281E2BC10013FBF9 /* AgoraSoundTouch.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,6 +50,21 @@
 		70A5C9842046AC2D00135786 /* UZAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UZAppDelegate.h; sourceTree = "<group>"; };
 		70A5C9852046AC2D00135786 /* UZAppUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UZAppUtils.h; sourceTree = "<group>"; };
 		70A5C9862046AC2D00135786 /* NSDictionaryUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDictionaryUtils.h; sourceTree = "<group>"; };
+		8BC3EC44281E2BC10013FBF9 /* AgoraAIDenoiseExtension.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AgoraAIDenoiseExtension.xcframework; path = "/Volumes/dev/IdeaProjects/APICloud-SDK/iOS/Sample/../libs/AgoraAIDenoiseExtension.xcframework"; sourceTree = "<absolute>"; };
+		8BC3EC46281E2BC10013FBF9 /* AgoraCIExtension.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AgoraCIExtension.xcframework; path = "/Volumes/dev/IdeaProjects/APICloud-SDK/iOS/Sample/../libs/AgoraCIExtension.xcframework"; sourceTree = "<absolute>"; };
+		8BC3EC48281E2BC10013FBF9 /* AgoraCore.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AgoraCore.xcframework; path = "/Volumes/dev/IdeaProjects/APICloud-SDK/iOS/Sample/../libs/AgoraCore.xcframework"; sourceTree = "<absolute>"; };
+		8BC3EC4A281E2BC10013FBF9 /* AgoraDav1dExtension.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AgoraDav1dExtension.xcframework; path = "/Volumes/dev/IdeaProjects/APICloud-SDK/iOS/Sample/../libs/AgoraDav1dExtension.xcframework"; sourceTree = "<absolute>"; };
+		8BC3EC4C281E2BC10013FBF9 /* AgoraFDExtension.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AgoraFDExtension.xcframework; path = "/Volumes/dev/IdeaProjects/APICloud-SDK/iOS/Sample/../libs/AgoraFDExtension.xcframework"; sourceTree = "<absolute>"; };
+		8BC3EC4E281E2BC10013FBF9 /* Agorafdkaac.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Agorafdkaac.xcframework; path = "/Volumes/dev/IdeaProjects/APICloud-SDK/iOS/Sample/../libs/Agorafdkaac.xcframework"; sourceTree = "<absolute>"; };
+		8BC3EC50281E2BC10013FBF9 /* Agoraffmpeg.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Agoraffmpeg.xcframework; path = "/Volumes/dev/IdeaProjects/APICloud-SDK/iOS/Sample/../libs/Agoraffmpeg.xcframework"; sourceTree = "<absolute>"; };
+		8BC3EC52281E2BC10013FBF9 /* AgoraFullAudioFormatExtension.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AgoraFullAudioFormatExtension.xcframework; path = "/Volumes/dev/IdeaProjects/APICloud-SDK/iOS/Sample/../libs/AgoraFullAudioFormatExtension.xcframework"; sourceTree = "<absolute>"; };
+		8BC3EC54281E2BC10013FBF9 /* AgoraReplayKitExtension.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AgoraReplayKitExtension.xcframework; path = "/Volumes/dev/IdeaProjects/APICloud-SDK/iOS/Sample/../libs/AgoraReplayKitExtension.xcframework"; sourceTree = "<absolute>"; };
+		8BC3EC56281E2BC10013FBF9 /* AgoraRtcKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AgoraRtcKit.xcframework; path = "/Volumes/dev/IdeaProjects/APICloud-SDK/iOS/Sample/../libs/AgoraRtcKit.xcframework"; sourceTree = "<absolute>"; };
+		8BC3EC58281E2BC10013FBF9 /* AgoraSoundTouch.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AgoraSoundTouch.xcframework; path = "/Volumes/dev/IdeaProjects/APICloud-SDK/iOS/Sample/../libs/AgoraSoundTouch.xcframework"; sourceTree = "<absolute>"; };
+		8BC3EC5A281E2BC10013FBF9 /* AgoraSpatialAudioExtension.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AgoraSpatialAudioExtension.xcframework; path = "/Volumes/dev/IdeaProjects/APICloud-SDK/iOS/Sample/../libs/AgoraSpatialAudioExtension.xcframework"; sourceTree = "<absolute>"; };
+		8BC3EC5C281E2BC10013FBF9 /* AgoraSuperResolutionExtension.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AgoraSuperResolutionExtension.xcframework; path = "/Volumes/dev/IdeaProjects/APICloud-SDK/iOS/Sample/../libs/AgoraSuperResolutionExtension.xcframework"; sourceTree = "<absolute>"; };
+		8BC3EC5E281E2BC10013FBF9 /* AgoraVideoProcessExtension.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AgoraVideoProcessExtension.xcframework; path = "/Volumes/dev/IdeaProjects/APICloud-SDK/iOS/Sample/../libs/AgoraVideoProcessExtension.xcframework"; sourceTree = "<absolute>"; };
+		8BC3EC60281E2BC10013FBF9 /* AgoraVideoSegmentationExtension.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = AgoraVideoSegmentationExtension.xcframework; path = "/Volumes/dev/IdeaProjects/APICloud-SDK/iOS/Sample/../libs/AgoraVideoSegmentationExtension.xcframework"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +72,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BC3EC63281E2CC60013FBF9 /* AgoraCore.xcframework in Frameworks */,
+				8BC3EC64281E2CC60013FBF9 /* Agoraffmpeg.xcframework in Frameworks */,
+				8BC3EC65281E2CC60013FBF9 /* AgoraRtcKit.xcframework in Frameworks */,
+				8BC3EC66281E2CC60013FBF9 /* AgoraSoundTouch.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +88,7 @@
 				70A5C97F2046AC2D00135786 /* UZEngine */,
 				5286082A1A596B0600587EC2 /* AgoraRtcForAPICloud */,
 				528608291A596B0600587EC2 /* Products */,
+				8BC3EC43281E2BC10013FBF9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +121,28 @@
 			);
 			name = UZEngine;
 			path = ../libs/UZEngine;
+			sourceTree = "<group>";
+		};
+		8BC3EC43281E2BC10013FBF9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8BC3EC44281E2BC10013FBF9 /* AgoraAIDenoiseExtension.xcframework */,
+				8BC3EC46281E2BC10013FBF9 /* AgoraCIExtension.xcframework */,
+				8BC3EC48281E2BC10013FBF9 /* AgoraCore.xcframework */,
+				8BC3EC4A281E2BC10013FBF9 /* AgoraDav1dExtension.xcframework */,
+				8BC3EC4C281E2BC10013FBF9 /* AgoraFDExtension.xcframework */,
+				8BC3EC4E281E2BC10013FBF9 /* Agorafdkaac.xcframework */,
+				8BC3EC50281E2BC10013FBF9 /* Agoraffmpeg.xcframework */,
+				8BC3EC52281E2BC10013FBF9 /* AgoraFullAudioFormatExtension.xcframework */,
+				8BC3EC54281E2BC10013FBF9 /* AgoraReplayKitExtension.xcframework */,
+				8BC3EC56281E2BC10013FBF9 /* AgoraRtcKit.xcframework */,
+				8BC3EC58281E2BC10013FBF9 /* AgoraSoundTouch.xcframework */,
+				8BC3EC5A281E2BC10013FBF9 /* AgoraSpatialAudioExtension.xcframework */,
+				8BC3EC5C281E2BC10013FBF9 /* AgoraSuperResolutionExtension.xcframework */,
+				8BC3EC5E281E2BC10013FBF9 /* AgoraVideoProcessExtension.xcframework */,
+				8BC3EC60281E2BC10013FBF9 /* AgoraVideoSegmentationExtension.xcframework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,7 +275,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -275,7 +321,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
