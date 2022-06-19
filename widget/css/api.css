@@ -14,48 +14,68 @@ html,body {
 	-webkit-user-select:none;
 	background-color: #fff;
 }
-
+nav,article,aside,details,main,header,footer,section,fieldset,figcaption,figure{
+	display: block;
+}
+img,a,button,em,del,strong,var,label,cite,small,time,mark,code,textarea{
+	display:inline-block;
+}
+header,section,footer {
+	position:relative;
+}
 ol,ul{
 	list-style:none;
 }
-
-html,body{
-   height: 100%;
-   width: 100%;
+input,button,textarea {
+	border:0;
+	margin:0;
+	padding:0;
+	font-size:1em;
+	line-height:1em;
+	/*-webkit-appearance:none;*/
+	background-color:rgba(0, 0, 0, 0);
 }
-#wrap{
-    height: 100%;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-flex-flow: column;
+span{
+	display:inline-block;
 }
-#header{
-	display:-webkit-box;
-	background-color: #078f5f; 
-	color: #fff;
-    width: 100%;
+a:active, a:hover {
+  outline: 0;
 }
-#header h1{
-	text-align: center; 
-    font-size: 15px; 
-	height: 44px;
-	-webkit-box-flex:1; 
-	line-height: 44px; 
-	margin: 0em; 
-	color: #fff;
+a, a:visited{
+	text-decoration:none;
 }
 
-#main{
-    -webkit-box-flex: 1; 
-    -webkit-flex: 1;
+label, .wordWrap{
+    word-wrap: break-word;
+    word-break: break-all;
 }
-#footer{
-    height: 30px; 
-	line-height: 30px;
-    background-color: #078f5f; 
-    width: 100%;
-    text-align: center;
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
-#footer h5{
-    color: white;
+td,th {
+  padding: 0;
+}
+.clearfix:after{
+	content: ' ';
+	display: block;
+	clear: both;
+	visibility:hidden;
+	line-height: 0;
+	height:0;
+}
+.loading_more{
+	display: block;
+	height: 1.5em;
+	width: 100%;
+}
+.loading_more:before {
+	display: inline-block; vertical-align: text-bottom;
+	content: ' '; height: 16px; width: 16px; margin-right: 6px;
+	background: url(../image/loading_more.gif) no-repeat center;
+	-webkit-background-size: contain;
+	background-size: contain;
+} 
+.loading_more:after {
+	content: '加载更多';	
 }

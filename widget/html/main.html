@@ -1,0 +1,346 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="maximum-scale=1.0, minimum-scale=1.0, user-scalable=0, initial-scale=1.0, width=device-width" />
+    <meta name="format-detection" content="telephone=no, email=no, date=no, address=no">
+    <title>Hello APP</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../css/box.css" />
+    <style>
+        label {
+            margin: 10px;
+            font-size: 24px;
+        }
+
+        ul {
+            margin-bottom: 10px;
+        }
+
+        ul li {
+            margin: 5px 10px;
+            padding: 5px;
+            color: #000;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+
+
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+    var uzmodule_agora_rtc = null;
+		apiready = function () {
+			uzmodule_agora_rtc = api.require('agoraRtc');
+		}
+
+		function init() {
+			var param = { appId: Agora APP ID };
+			uzmodule_agora_rtc.init(param);
+
+			var methodCallbackJoinChannel = function (ret, err) {
+                // alert(ret.channel + " join success"); 
+			}
+			uzmodule_agora_rtc.joinChannelSuccessListener(methodCallbackJoinChannel);
+
+			var methodCallbackRemoteVideoDecode = function (ret, err) {
+				setupRemoteVideo(ret.uid);
+			}
+			uzmodule_agora_rtc.firstRemoteVideoDecodedListener(methodCallbackRemoteVideoDecode);
+
+			var methodCallbackLeaveChannel = function (ret, err) {
+				uzmodule_agora_rtc.setupLocalVideo();
+			}
+			uzmodule_agora_rtc.leaveChannelListener(methodCallbackLeaveChannel);
+
+			var methodCallbackUserOffine = function (ret, err) {
+				uzmodule_agora_rtc.setupRemoteVideo({ uid: ret.uid });
+			}
+			uzmodule_agora_rtc.remoteUserOfflineListener(methodCallbackUserOffine);
+
+			uzmodule_agora_rtc.enableVideo();
+
+			var paramChannelProfile = { profile: 1 };
+			uzmodule_agora_rtc.setChannelProfile(paramChannelProfile);
+
+			var paramClientRole = { role: 1 };
+			uzmodule_agora_rtc.setClientRole(paramClientRole);
+
+			var paramVideoProfile = { width: 360, height: 640, frameRate: 15, bitrate: 800 };
+			uzmodule_agora_rtc.setVideoProfile(paramVideoProfile);
+
+			setupLocalVideo();
+
+			var paramJoinChannel = { token: "", channel: "api_cloud_test", uid: 0 };
+			uzmodule_agora_rtc.joinChannel(paramJoinChannel);
+		}
+
+		/** --------- simple example -------- **/
+
+		function getSdkVersion() {
+			var resultCallback = function (ret, err) {
+				alert(ret);
+			}
+			uzmodule_agora_rtc.getSdkVersion(resultCallback);
+		}
+
+		function setParameters() {
+			var param = { params: "{\"che.video.enableRemoteViewMirror\":true}" };
+			var resultCallback = function (ret, err) {
+				alert(ret.code);
+			}
+			uzmodule_agora_rtc.setParameters(param, resultCallback);
+		}
+
+		function setLogFile() {
+			var param;
+			if (api.systemType == "android") {
+				param = { path: "/sdcard/agora_rtc.log" };
+			} else if (api.systemType == "ios") {
+				param = { path: "cache://agora_rtc.log" };
+			}
+
+			var resultCallback = function (ret, err) {
+				alert(ret.code);
+			}
+			uzmodule_agora_rtc.setLogFile(param, resultCallback);
+		}
+
+		function setLogFilter() {
+			var param = { filter: 65535 };
+			var resultCallback = function (ret, err) {
+				alert(ret.code);
+			}
+			uzmodule_agora_rtc.setLogFilter(param, resultCallback);
+		}
+
+		function joinChannel() {
+			var param = { token: "", channelId: "api_cloud_test", uid: 0 };
+			uzmodule_agora_rtc.joinChannel(param);
+		}
+
+		function leaveChannel() {
+			uzmodule_agora_rtc.leaveChannel();
+		}
+
+		function setChannelProfile() {
+			var param = { profile: 1 };
+			uzmodule_agora_rtc.setChannelProfile(param);
+		}
+
+		function setClientRole() {
+			var param = { role: 1 };
+			uzmodule_agora_rtc.setClientRole(param);
+		}
+
+		function renewToken() {
+			var param = { token: "" };
+			uzmodule_agora_rtc.renewToken(param);
+		}
+
+		function enableVideo() {
+			uzmodule_agora_rtc.enableVideo();
+		}
+
+		function disableVideo() {
+			uzmodule_agora_rtc.disableVideo();
+		}
+
+		function enableLocalVideo() {
+			var param = { enabled: true };
+			uzmodule_agora_rtc.enableLocalVideo(param);
+		}
+
+		function setEnableSpeakerphone() {
+			var param = { enabled: true };
+			uzmodule_agora_rtc.setEnableSpeakerphone(param);
+		}
+
+		function setDefaultAudioRouteToSpeakerphone() {
+			var param = { enabled: true };
+			uzmodule_agora_rtc.setDefaultAudioRouteToSpeakerphone(param);
+		}
+
+		function setVideoProfile() {
+			var param = { width: 360, height: 640, frameRate: 15, bitrate: 800 };
+			uzmodule_agora_rtc.setVideoProfile(param);
+		}
+
+		function adjustRecordingSignalVolume() {
+			var paramRecordingSignalVolume = { volume: 200 };
+			uzmodule_agora_rtc.adjustRecordingSignalVolume(paramRecordingSignalVolume);
+		}
+
+		function setupLocalVideo() {
+			var paramLocalVideoView = {
+				rect: {
+					x: 20,
+					y: 20,
+					w: 200,
+					h: 200
+				},
+				fixedOn: 'main',
+				fixed: false,
+				renderMode: 1
+			};
+			uzmodule_agora_rtc.setupLocalVideo(paramLocalVideoView);
+		}
+
+		function startPreview() {
+			uzmodule_agora_rtc.startPreview();
+		}
+
+		function stopPreview() {
+			uzmodule_agora_rtc.stopPreview();
+		}
+
+		function switchCamera() {
+			uzmodule_agora_rtc.switchCamera();
+		}
+
+		function setupRemoteVideo(uid) {
+			var paramRemoteVideoView = {
+				uid: uid,
+				rect: {
+					x: 0,
+					y: 0,
+					w: 0,
+					h: 360
+				},
+				fixedOn: 'main',
+				fixed: false,
+				renderMode: 1
+			};
+			uzmodule_agora_rtc.setupRemoteVideo(paramRemoteVideoView);
+		}
+
+		function muteLocalVideoStream() {
+			var param = { mute: true };
+			uzmodule_agora_rtc.muteLocalVideoStream(param);
+		}
+
+		function muteAllRemoteVideoStreams() {
+			var param = { mute: true };
+			uzmodule_agora_rtc.muteAllRemoteVideoStreams(param);
+		}
+
+		function muteRemoteVideoStream() {
+			var param = { mute: true };
+			uzmodule_agora_rtc.muteRemoteVideoStream(param);
+		}
+
+		function enableAudio() {
+			uzmodule_agora_rtc.enableAudio();
+		}
+
+		function disableAudio() {
+			uzmodule_agora_rtc.disableAudio();
+		}
+
+		function pauseAudio() {
+			uzmodule_agora_rtc.pauseAudio();
+		}
+
+		function resumeAudio() {
+			uzmodule_agora_rtc.resumeAudio();
+		}
+
+		function muteLocalAudioStream() {
+			var param = { mute: true };
+			uzmodule_agora_rtc.muteLocalAudioStream(param);
+		}
+
+		function muteAllRemoteAudioStreams() {
+			var param = { mute: true };
+			uzmodule_agora_rtc.muteAllRemoteAudioStreams(param);
+		}
+
+		function muteRemoteAudioStream() {
+			var param = { uid: 0, mute: true };
+			uzmodule_agora_rtc.muteRemoteAudioStream(param);
+		}
+
+		/** -----------callback method---------------- **/
+		function warningListener() {
+			var methodCallback = function (ret, err) {
+
+			}
+			uzmodule_agora_rtc.warningListener(methodCallback);
+		}
+
+		function errorListener() {
+			var methodCallback = function (ret, err) {
+
+			}
+			uzmodule_agora_rtc.errorListener(methodCallback);
+		}
+
+		function requestTokenListener() {
+			var methodCallback = function (ret, err) {
+
+			}
+			uzmodule_agora_rtc.requestTokenListener(methodCallback);
+		}
+
+		function joinChannelSuccessListener() {
+			var methodCallback = function (ret, err) {
+
+			}
+			uzmodule_agora_rtc.joinChannelSuccessListener(methodCallback);
+		}
+
+		function leaveChannelListener() {
+			var methodCallback = function (ret, err) {
+
+			}
+			uzmodule_agora_rtc.leaveChannelListener(methodCallback);
+		}
+
+		function firstLocalVideoFrameListener() {
+			var methodCallback = function (ret, err) {
+
+			}
+			uzmodule_agora_rtc.firstLocalVideoFrameListener(methodCallback);
+		}
+
+		function firstRemoteVideoDecodedListener() {
+			var methodCallback = function (ret, err) {
+
+			}
+			uzmodule_agora_rtc.firstRemoteVideoDecodedListener(methodCallback);
+		}
+
+		function remoteUserJoinedListener() {
+			var methodCallback = function (ret, err) {
+
+			}
+			uzmodule_agora_rtc.remoteUserJoinedListener(methodCallback);
+		}
+
+		function remoteUserOfflineListener() {
+			var methodCallback = function (ret, err) {
+
+			}
+			uzmodule_agora_rtc.remoteUserOfflineListener(methodCallback);
+		}
+</script>
+
+<body>
+	<div id="wrap">
+		<div id="main">
+			<br>
+			<div class="clickbtn" tapmode="active" onclick="init()">Join Channel</div>
+			<div class="clickbtn" tapmode="active" onclick="getSdkVersion()">GetSdkVersion</div>
+			<lable></lable>
+			<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+			<div class="clickbtn" tapmode="active" onclick="leaveChannel()">Leave Channel</div>
+			<div class="clickbtn" tapmode="active" onclick="muteLocalAudioStream()">Mute Local Audio</div>
+			<div class="clickbtn" tapmode="active" onclick="switchCamera()">Switch Camera</div>
+
+			<br>
+		</div>
+	</div>
+</body>
+
+</html>
