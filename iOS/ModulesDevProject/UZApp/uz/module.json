@@ -1,0 +1,10 @@
+[
+ {
+    "name":"moduleDemo",
+    "class":"UZModuleDemo"
+ },
+ {
+     "name":"moduleDemoSwift",
+     "class":"UZModuleDemoSwift"
+ }
+]

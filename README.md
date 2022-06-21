@@ -24,7 +24,7 @@ App Id 请去 https://dashboard.agora.io/ 注册获取。
 
 对于 iOS 来说，需要先按照 `PLACEHOLDER` 文件添加对应的库文件。
 
-`iOS/libs/PLACEHOLDER`
+`iOS/agoraRtc/framework/PLACEHOLDER`
 
 widget 下面是应用的代码，需要先修改 `{ appId: YOUR APP ID };` 填上申请的 App Id
 具体参见本项目对应文件夹下的 README.md 文件
